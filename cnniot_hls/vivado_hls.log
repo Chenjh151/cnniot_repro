@@ -1,0 +1,178 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running 'D:/FPGA_Xilinx_2019.2/Vivado/2019.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'chenj' on host 'chenjh' (Windows NT_amd64 version 6.2) on Mon Jun 02 17:36:03 +0800 2025
+INFO: [HLS 200-10] In directory 'D:/FPGA_src/github_lab/GitHub_CNNIOT/repro_cnniot/cnniot_hls'
+Sourcing Tcl script 'D:/FPGA_src/github_lab/GitHub_CNNIOT/repro_cnniot/cnniot_hls/cnniot/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project 'D:/FPGA_src/github_lab/GitHub_CNNIOT/repro_cnniot/cnniot_hls/cnniot'.
+INFO: [HLS 200-10] Adding design file 'cnniot/main.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'D:/FPGA_src/github_lab/GitHub_CNNIOT/repro_cnniot/cnniot_hls/cnniot/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-2'
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'cnniot/main.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 192.324 ; gain = 102.062
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 192.324 ; gain = 102.062
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 197.988 ; gain = 107.727
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 230.066 ; gain = 139.805
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out_data.data.V' (cnniot/main.cpp:32).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in_data.data.V' (cnniot/main.cpp:32).
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.5.1.1' (cnniot/main.cpp:125) in function 'cnn' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.7.1.1' (cnniot/main.cpp:209) in function 'cnn' for pipelining.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.5.1.1.1' (cnniot/main.cpp:130) in function 'cnn': cannot completely unroll a loop with a variable trip count.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.5.1.1.1.1' (cnniot/main.cpp:133) in function 'cnn': cannot completely unroll a loop with a variable trip count.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.5.1.1.1.1.1' (cnniot/main.cpp:136) in function 'cnn': cannot completely unroll a loop with a variable trip count.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.7.1.1.1' (cnniot/main.cpp:213) in function 'cnn': cannot completely unroll a loop with a variable trip count.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.7.1.1.1.1' (cnniot/main.cpp:215) in function 'cnn': cannot completely unroll a loop with a variable trip count.
+INFO: [XFORM 203-102] Partitioning array 'Filter_size' (cnniot/main.cpp:42) automatically.
+INFO: [XFORM 203-102] Partitioning array 'Input_Size' (cnniot/main.cpp:42) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'cnn' (cnniot/main.cpp:32)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 290.656 ; gain = 200.395
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function '__hls_fptosi_float_i32' (cnniot/main.cpp:49:20) in function 'cnn' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function '__hls_fptosi_float_i32' (cnniot/main.cpp:93:16) in function 'cnn' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function '__hls_fptosi_float_i32' (cnniot/main.cpp:102:15) in function 'cnn' and propagating its result(s) since all actual argument(s) to the function are constants.
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function '__hls_fptosi_float_i32' (cnniot/main.cpp:285:17) in function 'cnn' and propagating its result(s) since all actual argument(s) to the function are constants.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.5.1.1' (cnniot/main.cpp:125:28) in function 'cnn' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.5.1' (cnniot/main.cpp:123:24) in function 'cnn'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.5' (cnniot/main.cpp:121:20) in function 'cnn'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.7.1.1' (cnniot/main.cpp:209:28) in function 'cnn' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.7.1' (cnniot/main.cpp:207:24) in function 'cnn'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.7' (cnniot/main.cpp:205:20) in function 'cnn'.
+WARNING: [XFORM 203-561] 'Loop-1' (cnniot/main.cpp:46:15) in function 'cnn' is an infinite loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (cnniot/main.cpp:46:15) in function 'cnn' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-631] Renaming function '__hls_fptosi_float_i32' to '__hls_fptosi_float_i' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:15:54)
+INFO: [HLS 200-472] Inferring partial write operation for 'Parameters' (cnniot/main.cpp:49:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'Input' (cnniot/main.cpp:82:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'Bias' (cnniot/main.cpp:94:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'Weight' (cnniot/main.cpp:103:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'Input' (cnniot/main.cpp:191:4)
+INFO: [HLS 200-472] Inferring partial write operation for 'Input' (cnniot/main.cpp:275:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'Bias' (cnniot/main.cpp:286:6)
+INFO: [HLS 200-472] Inferring partial write operation for 'Weight' (cnniot/main.cpp:308:5)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 310.168 ; gain = 219.906
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'cnn' ...
+WARNING: [SYN 201-103] Legalizing function name '__hls_fptosi_float_i' to 'p_hls_fptosi_float_i'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Axi_Transfer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'Axi_Transfer'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 9.956 seconds; current allocated memory: 250.369 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.033 seconds; current allocated memory: 250.471 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_hls_fptosi_float_i' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function '__hls_fptosi_float_i'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.044 seconds; current allocated memory: 250.621 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.035 seconds; current allocated memory: 250.723 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.226 seconds; current allocated memory: 252.824 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.295 seconds; current allocated memory: 255.744 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Axi_Transfer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Axi_Transfer'.
+INFO: [HLS 200-111]  Elapsed time: 0.306 seconds; current allocated memory: 256.280 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_hls_fptosi_float_i' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_hls_fptosi_float_i'.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 256.590 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/in_data_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/in_data_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/in_data_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/in_data_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/in_data_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/in_data_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/in_data_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/out_data_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/out_data_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/out_data_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/out_data_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/out_data_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/out_data_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/out_data_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'cnn' to 'ap_ctrl_none'.
+INFO: [SYN 201-210] Renamed object name 'cnn_fadd_32ns_32ns_32_4_full_dsp_1' to 'cnn_fadd_32ns_32nbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'cnn_fmul_32ns_32ns_32_3_max_dsp_1' to 'cnn_fmul_32ns_32ncud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'cnn_fdiv_32ns_32ns_32_12_1' to 'cnn_fdiv_32ns_32ndEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'cnn_sitofp_32ns_32_4_1' to 'cnn_sitofp_32ns_3eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'cnn_fcmp_32ns_32ns_1_2_1' to 'cnn_fcmp_32ns_32nfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'cnn_sdiv_32ns_32s_32_36_seq_1' to 'cnn_sdiv_32ns_32sg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'cnn_mul_64ns_32ns_96_2_1' to 'cnn_mul_64ns_32nshbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'cnn_sdiv_32s_32s_32_36_seq_1' to 'cnn_sdiv_32s_32s_ibs' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'cnn_fadd_32ns_32nbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'cnn_fcmp_32ns_32nfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'cnn_fdiv_32ns_32ndEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'cnn_fmul_32ns_32ncud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'cnn_mul_64ns_32nshbi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'cnn_sdiv_32ns_32sg8j': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'cnn_sdiv_32s_32s_ibs': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'cnn_sitofp_32ns_3eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn'.
+INFO: [HLS 200-111]  Elapsed time: 0.224 seconds; current allocated memory: 261.850 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 105.50 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'cnn_sdiv_32ns_32sg8j_div'
+INFO: [RTMG 210-282] Generating pipelined core: 'cnn_mul_64ns_32nshbi_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'cnn_sdiv_32s_32s_ibs_div'
+INFO: [RTMG 210-278] Implementing memory 'cnn_Input_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_Bias_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_Parameters_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 346.086 ; gain = 255.824
+INFO: [VHDL 208-304] Generating VHDL RTL for cnn.
+INFO: [VLOG 209-307] Generating Verilog RTL for cnn.
+INFO: [HLS 200-112] Total elapsed time: 13.386 seconds; peak allocated memory: 261.850 MB.

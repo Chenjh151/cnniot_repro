@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="cnniot_processing_system7_0_0_synth_1" LaunchDir="D:/FPGA_src/github_lab/GitHub_CNNIOT/repro_cnniot/cnniot_vivado/cnniot/cnniot.runs/cnniot_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cnniot_cnn_0_0_synth_1" LaunchDir="D:/FPGA_src/github_lab/GitHub_CNNIOT/repro_cnniot/cnniot_vivado/cnniot/cnniot.runs/cnniot_cnn_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cnniot_proc_sys_reset_0_0_synth_1" LaunchDir="D:/FPGA_src/github_lab/GitHub_CNNIOT/repro_cnniot/cnniot_vivado/cnniot/cnniot.runs/cnniot_proc_sys_reset_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cnniot_axi_dma_0_0_synth_1" LaunchDir="D:/FPGA_src/github_lab/GitHub_CNNIOT/repro_cnniot/cnniot_vivado/cnniot/cnniot.runs/cnniot_axi_dma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cnniot_auto_pc_0_synth_1" LaunchDir="D:/FPGA_src/github_lab/GitHub_CNNIOT/repro_cnniot/cnniot_vivado/cnniot/cnniot.runs/cnniot_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cnniot_smartconnect_0_0_synth_1" LaunchDir="D:/FPGA_src/github_lab/GitHub_CNNIOT/repro_cnniot/cnniot_vivado/cnniot/cnniot.runs/cnniot_smartconnect_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
